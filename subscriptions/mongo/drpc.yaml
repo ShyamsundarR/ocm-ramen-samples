@@ -1,0 +1,14 @@
+---
+apiVersion: ramendr.openshift.io/v1alpha1
+kind: DRPlacementControl
+metadata:
+  name: mongo-drpc
+  labels:
+    app: mongo-sample
+spec:
+  preferredCluster: ocp4perf1
+  drPolicyRef:
+    name: ocp4perf1-ocp4perf2-2m
+  placementRef:
+    kind: PlacementRule
+    name: mongo-placement
