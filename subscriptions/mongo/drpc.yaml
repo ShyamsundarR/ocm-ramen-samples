@@ -12,3 +12,4 @@ spec:
   placementRef:
     kind: PlacementRule
     name: mongo-placement
+  pvcSelector: {}
