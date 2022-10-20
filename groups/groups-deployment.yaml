@@ -17,6 +17,7 @@ spec:
       containers:
       - image: quay.io/shyamsundarr/groups:canary
         name: groups
+        imagePullPolicy: Always
         ports:
         - name: groups
           containerPort: 27017
