@@ -2,28 +2,28 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    name: mongo
-  name: mongo
+    name: groups
+  name: groups
 spec:
   replicas: 1
   selector:
     matchLabels:
-      name: mongo
+      name: groups
   template:
     metadata:
       labels:
-        name: mongo
+        name: groups
     spec:
       containers:
-      - image: bitnami/mongodb:latest
-        name: mongo
+      - image: quay.io/shyamsundarr/groups:canary
+        name: groups
         ports:
-        - name: mongo
+        - name: groups
           containerPort: 27017
         volumeMounts:
-          - name: mongo-db
+          - name: groups-vol
             mountPath: /bitnami
       volumes:
-        - name: mongo-db
+        - name: groups-vol
           persistentVolumeClaim:
-            claimName: mongo-storage
+            claimName: groups-storage

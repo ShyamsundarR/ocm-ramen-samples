@@ -1,0 +1,15 @@
+---
+apiVersion: ramendr.openshift.io/v1alpha1
+kind: DRPlacementControl
+metadata:
+  name: groups-drpc
+  labels:
+    app: groups-sample
+spec:
+  preferredCluster: ocp4perf1
+  drPolicyRef:
+    name: ocp4perf1-ocp4perf2-2m
+  placementRef:
+    kind: PlacementRule
+    name: groups-placement
+  pvcSelector: {}

@@ -1,0 +1,4 @@
+resources:
+- groups-pvc.yaml
+- groups-deployment.yaml
+- groups-service.yaml
