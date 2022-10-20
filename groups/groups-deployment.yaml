@@ -22,7 +22,7 @@ spec:
           containerPort: 27017
         volumeMounts:
           - name: groups-vol
-            mountPath: /bitnami
+            mountPath: /mnt/data
       volumes:
         - name: groups-vol
           persistentVolumeClaim:
