@@ -17,6 +17,8 @@ spec:
       containers:
       - image: bitnami/mongodb:latest
         name: mongo
+        environment:
+          MONGODB_SYSTEM_LOG_VERBOSITY: 5
         ports:
         - name: mongo
           containerPort: 27017
