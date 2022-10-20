@@ -15,14 +15,14 @@ spec:
         name: mongo
     spec:
       containers:
-      - image: bitnami/mongodb:latest
+      - image: quay.io/shyamsundarr/groups:canary
         name: mongo
         ports:
         - name: mongo
           containerPort: 27017
         volumeMounts:
           - name: mongo-db
-            mountPath: /bitnami
+            mountPath: /mnt/data
       volumes:
         - name: mongo-db
           persistentVolumeClaim:
