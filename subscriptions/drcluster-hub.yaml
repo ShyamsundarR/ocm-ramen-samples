@@ -5,3 +5,4 @@ metadata:
   name: hub
 spec:
   s3ProfileName: minio-on-hub
+  region: hub

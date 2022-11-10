@@ -5,3 +5,4 @@ metadata:
   name: cluster1
 spec:
   s3ProfileName: minio-on-cluster1
+  region: cluster1
