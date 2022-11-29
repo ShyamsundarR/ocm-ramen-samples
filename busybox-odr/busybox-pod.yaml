@@ -6,6 +6,10 @@ metadata:
   labels:
     appname: busybox
 spec:
+  securityContext:
+    runAsNonRoot: true
+    seccompProfile:
+      type: RuntimeDefault
   containers:
     - name: busybox
       image: quay.io/vcppds7878/busybox:latest 
