@@ -34,7 +34,12 @@ spec:
           volumeMounts:
             - name: varlog
               mountPath: /var/log
+            - name: varlog2
+              mountPath: /var/log1
       volumes:
         - name: varlog
           persistentVolumeClaim:
             claimName: busybox-pvc
+        - name: varlog2
+          persistentVolumeClaim:
+            claimName: busybox-pvc-cephfs

@@ -7,7 +7,20 @@ spec:
   accessModes:
     - ReadWriteOnce
   # Customize in your overlay.
-  storageClassName: STORAGE_CLASS_NAME
+  storageClassName: rook-ceph-block
+  resources:
+    requests:
+      storage: 1Gi
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: busybox-pvc-cephfs
+spec:
+  accessModes:
+    - ReadWriteMany
+  # Customize in your overlay.
+  storageClassName: rook-cephfs
   resources:
     requests:
       storage: 1Gi
