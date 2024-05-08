@@ -8,4 +8,8 @@ patches:
     patch: |-
       - op: replace
         path: /spec/storageClassName
-        value: rook-ceph-block
+        value: rook-cephfs
+      - op: replace
+        path: /spec/accessModes
+        value:
+          - ReadWriteMany
