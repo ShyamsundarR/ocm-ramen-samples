@@ -9,3 +9,14 @@ patches:
       - op: replace
         path: /spec/storageClassName
         value: rook-ceph-block
+  - target:
+      kind: PersistentVolumeClaim
+      name: busybox-pvc-1
+    patch: |-
+      - op: replace
+        path: /spec/storageClassName
+        value: rook-cephfs
+      - op: replace
+        path: /spec/accessModes
+        value:
+          - ReadWriteMany
